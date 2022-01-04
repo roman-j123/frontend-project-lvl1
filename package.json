@@ -1,0 +1,24 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Hexlet frontend project: Brain Games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-j123/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "javascript",
+    "hexlet"
+  ],
+  "author": "Roman Ismagilov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roman-j123/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/roman-j123/frontend-project-lvl1#readme"
+}
