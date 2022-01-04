@@ -1,2 +1,8 @@
 #!/usr/bin/env node
-console.log('Welcome to the Brain Games!');
+/* eslint-disable no-console */
+/* eslint-disable-next-line import/extensions */
+import userName from '../src/cli.js'
+
+console.log('Welcome to the Brain Games!')
+const name = userName()
+console.log(`Hello, ${name}!`)
