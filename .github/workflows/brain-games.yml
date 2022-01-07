@@ -4,4 +4,7 @@ jobs:
   bulid:
     runs-on: ubuntu-latest
     steps:
-      - run: make lint
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Run linter
+        run: make lint
