@@ -15,3 +15,10 @@
 Вам будет показано случайное число. Необходимо будет ответить **'yes'** - если число четное или **'no'** - если число нечётное.
 
 [![asciicast](https://asciinema.org/a/v2mQRz4ZIFoxo1QOekDLfcYpf.svg)](https://asciinema.org/a/v2mQRz4ZIFoxo1QOekDLfcYpf)
+
+## brain-calc
+Запуск: `brain-calc`
+
+Вам показывается случайное математическое выражение, например 12 + 26, которое нужно вычислить и записать правильный ответ.
+
+[![asciicast](https://asciinema.org/a/I33e0BnKTxeZz8B4Tle1WgIsQ.svg)](https://asciinema.org/a/I33e0BnKTxeZz8B4Tle1WgIsQ)

@@ -1,26 +1,29 @@
 #!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 import {
   MIN_VALUE,
   MAX_VALUE,
   MAX_ROUNDS,
   ROUND_COUNTER,
-  getRandomNumber,
-  checkEvenNumber,
+  getRandomExpression,
+  checkExpressionResult,
   name,
 } from '../src/index.js';
 
-const brainEven = () => {
+const brainCalc = () => {
   const userName = name;
   let counterOfCurrectValues = ROUND_COUNTER;
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const brainEvenEngine = () => {
-    const randomNumber = getRandomNumber();
-    console.log(`Question: ${randomNumber}`);
-    const currentAnswer = checkEvenNumber(randomNumber);
-    const userAnswer = readlineSync.question('Answer: ', {
-      limit: ['yes', 'no'],
-    });
+  console.log('What is the result of the expression?');
+  const brainCalcEngine = () => {
+    const { getRandomFirstValue, getRandomSecondValue, getRandomOperand } = getRandomExpression();
+    console.log(`Question: ${getRandomFirstValue} ${getRandomOperand} ${getRandomSecondValue}`);
+    const userAnswer = readlineSync.questionInt('Answer: ');
+    const currentAnswer = checkExpressionResult(
+      getRandomFirstValue,
+      getRandomSecondValue,
+      getRandomOperand,
+    );
     if (currentAnswer === userAnswer) {
       counterOfCurrectValues += 1;
       if (counterOfCurrectValues === 3) {
@@ -28,12 +31,12 @@ const brainEven = () => {
       }
       if (counterOfCurrectValues < MAX_ROUNDS) {
         console.log('Correct!');
-        brainEvenEngine();
+        brainCalcEngine();
       }
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${currentAnswer}'. \n Let's try again, ${name}!`);
     }
   };
-  brainEvenEngine();
+  brainCalcEngine();
 };
-brainEven(MIN_VALUE, MAX_VALUE);
+brainCalc(MIN_VALUE, MAX_VALUE);
