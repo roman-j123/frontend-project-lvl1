@@ -22,3 +22,10 @@
 Вам показывается случайное математическое выражение, например 12 + 26, которое нужно вычислить и записать правильный ответ.
 
 [![asciicast](https://asciinema.org/a/I33e0BnKTxeZz8B4Tle1WgIsQ.svg)](https://asciinema.org/a/I33e0BnKTxeZz8B4Tle1WgIsQ)
+
+## brain-gcd
+Запуск: `brain-gcd`
+
+Вам показывается два случайных числа, например, 25 50. Необходимо вычислить и ввести наибольший общий делитель этих чисел.
+
+[![asciicast](https://asciinema.org/a/wJCHBgXt6xMxb2eCxwO2Hu78g.svg)](https://asciinema.org/a/wJCHBgXt6xMxb2eCxwO2Hu78g)

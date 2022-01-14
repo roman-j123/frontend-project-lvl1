@@ -2,8 +2,6 @@
 
 import readlineSync from 'readline-sync';
 import {
-  MIN_VALUE,
-  MAX_VALUE,
   getRandomExpression,
   checkExpressionResult,
   name,
@@ -18,14 +16,14 @@ const brainCalc = () => {
     const { getRandomFirstValue, getRandomSecondValue, getRandomOperand } = getRandomExpression();
     console.log(`Question: ${getRandomFirstValue} ${getRandomOperand} ${getRandomSecondValue}`);
     const userAnswer = readlineSync.questionInt('Answer: ');
-    const currentAnswer = checkExpressionResult(
+    const currectAnswer = checkExpressionResult(
       getRandomFirstValue,
       getRandomSecondValue,
       getRandomOperand,
     );
     counterOfRound += 1;
-    gameMessage(currentAnswer, userAnswer, userName, counterOfRound, brainCalcEngine);
+    gameMessage(currectAnswer, userAnswer, userName, counterOfRound, brainCalcEngine);
   };
   brainCalcEngine();
 };
-brainCalc(MIN_VALUE, MAX_VALUE);
+brainCalc();

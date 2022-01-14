@@ -45,6 +45,22 @@ export const checkExpressionResult = (firstValue, secondValue, operand) => {
   }
   return currentAnswer;
 };
+export const checkGcdResult = (firstValue, secondValue) => {
+  let maxValue = Math.max(firstValue, secondValue);
+  let minValue = Math.min(firstValue, secondValue);
+  let result = maxValue % minValue;
+  if (result !== 0) {
+    while (result !== 0) {
+      maxValue = minValue;
+      minValue = result;
+      result = maxValue % minValue;
+      if (result === 0) {
+        return minValue;
+      }
+    }
+  }
+  return minValue;
+};
 // Функция приветсвия
 export const name = createUserName();
 // Функция случайного выражения
