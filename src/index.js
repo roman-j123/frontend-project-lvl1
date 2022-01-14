@@ -49,14 +49,15 @@ export const checkGcdResult = (firstValue, secondValue) => {
   let maxValue = Math.max(firstValue, secondValue);
   let minValue = Math.min(firstValue, secondValue);
   let result = maxValue % minValue;
-  if (result !== 0) {
-    while (result !== 0) {
-      maxValue = minValue;
-      minValue = result;
-      result = maxValue % minValue;
-      if (result === 0) {
-        return minValue;
-      }
+  if (result === 0) {
+    return minValue;
+  }
+  while (result !== 0) {
+    maxValue = minValue;
+    minValue = result;
+    result = maxValue % minValue;
+    if (result === 0) {
+      return minValue;
     }
   }
   return minValue;
