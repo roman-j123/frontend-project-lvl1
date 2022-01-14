@@ -4,10 +4,21 @@ export const MIN_VALUE = 0;
 export const MAX_VALUE = 100;
 export const MAX_ROUNDS = 3;
 export const ROUND_COUNTER = 0;
+
 // Функция получения случайного числа
 export const getRandomNumber = (min = MIN_VALUE, max = MAX_VALUE) => {
   const randomNumber = Math.floor(Math.random() * (max - min) + min);
   return randomNumber;
+};
+export const gameMessage = (currectAnswer, userAnswer, userName, counter, repeatFunction) => {
+  if (currectAnswer !== userAnswer) {
+    return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${currectAnswer}'. \n Let's try again, ${userName}!`);
+  }
+  if (counter === MAX_ROUNDS) {
+    return console.log(`Congratulations, ${userName}!`);
+  }
+  console.log('Correct!');
+  return repeatFunction();
 };
 // Функция проверки четного
 export const checkEvenNumber = (number) => {

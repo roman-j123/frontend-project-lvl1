@@ -3,16 +3,15 @@ import readlineSync from 'readline-sync';
 import {
   MIN_VALUE,
   MAX_VALUE,
-  MAX_ROUNDS,
-  ROUND_COUNTER,
   getRandomNumber,
   checkEvenNumber,
   name,
+  gameMessage,
 } from '../src/index.js';
 
 const brainEven = () => {
   const userName = name;
-  let counterOfCurrectValues = ROUND_COUNTER;
+  let counterOfRound = 0;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const brainEvenEngine = () => {
     const randomNumber = getRandomNumber();
@@ -21,18 +20,8 @@ const brainEven = () => {
     const userAnswer = readlineSync.question('Answer: ', {
       limit: ['yes', 'no'],
     });
-    if (currentAnswer === userAnswer) {
-      counterOfCurrectValues += 1;
-      if (counterOfCurrectValues === 3) {
-        console.log(`Congratulations, ${userName}!`);
-      }
-      if (counterOfCurrectValues < MAX_ROUNDS) {
-        console.log('Correct!');
-        brainEvenEngine();
-      }
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${currentAnswer}'. \n Let's try again, ${name}!`);
-    }
+    counterOfRound += 1;
+    gameMessage(currentAnswer, userAnswer, userName, counterOfRound, brainEvenEngine);
   };
   brainEvenEngine();
 };

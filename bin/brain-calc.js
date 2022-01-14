@@ -4,16 +4,15 @@ import readlineSync from 'readline-sync';
 import {
   MIN_VALUE,
   MAX_VALUE,
-  MAX_ROUNDS,
-  ROUND_COUNTER,
   getRandomExpression,
   checkExpressionResult,
   name,
+  gameMessage,
 } from '../src/index.js';
 
 const brainCalc = () => {
   const userName = name;
-  let counterOfCurrectValues = ROUND_COUNTER;
+  let counterOfRound = 0;
   console.log('What is the result of the expression?');
   const brainCalcEngine = () => {
     const { getRandomFirstValue, getRandomSecondValue, getRandomOperand } = getRandomExpression();
@@ -24,18 +23,8 @@ const brainCalc = () => {
       getRandomSecondValue,
       getRandomOperand,
     );
-    if (currentAnswer === userAnswer) {
-      counterOfCurrectValues += 1;
-      if (counterOfCurrectValues === 3) {
-        console.log(`Congratulations, ${userName}!`);
-      }
-      if (counterOfCurrectValues < MAX_ROUNDS) {
-        console.log('Correct!');
-        brainCalcEngine();
-      }
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${currentAnswer}'. \n Let's try again, ${name}!`);
-    }
+    counterOfRound += 1;
+    gameMessage(currentAnswer, userAnswer, userName, counterOfRound, brainCalcEngine);
   };
   brainCalcEngine();
 };
