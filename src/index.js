@@ -60,7 +60,7 @@ export const checkGcdResult = (firstValue, secondValue) => {
   let maxValue = Math.max(firstValue, secondValue);
   let minValue = Math.min(firstValue, secondValue);
   let result = maxValue % minValue;
-  if (result === 0) {
+  if (minValue === 0 || maxValue === 0) {
     return minValue;
   }
   while (result !== 0) {
