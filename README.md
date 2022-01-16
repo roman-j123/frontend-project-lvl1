@@ -3,6 +3,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/77587fcdff55ab245fce/maintainability)](https://codeclimate.com/github/roman-j123/frontend-project-lvl1/maintainability)
 [![Status](https://github.com/roman-j123/frontend-project-lvl1/workflows/brain-games/badge.svg)](https://github.com/roman-j123/frontend-project-lvl1/actions)
 
+## about
+-**Автор:** Роман Исмагилов
+-**Описание:** Игры-разума - это набор консольных игр для развития математического мышления.
+
 ## install
 Здесь написать про установку игры на компьютер
 
@@ -13,29 +17,37 @@
 - `MAX_ROUNDS` - максимальное количество раундов
 
 ## brain-even
-Запуск: `brain-even`
+**Запуск:** `brain-even`
 
-Вам будет показано случайное число. Необходимо будет ответить **'yes'** - если число четное или **'no'** - если число нечётное.
+**Описание:** Вам будет показано случайное число. Необходимо будет ответить **'yes'** - если число четное или **'no'** - если число нечётное.
 
 [![asciicast](https://asciinema.org/a/v2mQRz4ZIFoxo1QOekDLfcYpf.svg)](https://asciinema.org/a/v2mQRz4ZIFoxo1QOekDLfcYpf)
 
 ## brain-calc
-Запуск: `brain-calc`
+**Запуск:** `brain-calc`
 
-Вам показывается случайное математическое выражение, например 12 + 26, которое нужно вычислить и записать правильный ответ.
+**Описание:** Вам показывается случайное математическое выражение, например **12 + 26**, которое нужно вычислить и записать правильный ответ.
 
 [![asciicast](https://asciinema.org/a/I33e0BnKTxeZz8B4Tle1WgIsQ.svg)](https://asciinema.org/a/I33e0BnKTxeZz8B4Tle1WgIsQ)
 
 ## brain-gcd
-Запуск: `brain-gcd`
+**Запуск:** `brain-gcd`
 
-Вам показывается два случайных числа, например, 25 50. Необходимо вычислить и ввести наибольший общий делитель этих чисел.
+**Описание:** Вам показывается два случайных числа, например, **25 50**. Необходимо вычислить и ввести наибольший общий делитель этих чисел.
 
 [![asciicast](https://asciinema.org/a/wJCHBgXt6xMxb2eCxwO2Hu78g.svg)](https://asciinema.org/a/wJCHBgXt6xMxb2eCxwO2Hu78g)
 
 ## brain-progression
-Запуск: `brain-progression`
+**Запуск:** `brain-progression`
 
-Вам показывают ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Необходимо определить это число.
+**Описание:** Вам показывают ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Необходимо определить это число.
 
 [![asciicast](https://asciinema.org/a/3mcGkdnNOxYWS4r6EgdQRyzQu.svg)](https://asciinema.org/a/3mcGkdnNOxYWS4r6EgdQRyzQu)
+
+## brain-prime
+
+**Запуск:** `brain-prime`
+
+**Описание:** Вам будет показано случайное число. Необходимо будет ответить **'yes'** - если число простое или **'no'** - если число составное.
+
+[![asciicast](https://asciinema.org/a/830W6lxf886MK8j9hCPCeBv4Z.svg)](https://asciinema.org/a/830W6lxf886MK8j9hCPCeBv4Z)

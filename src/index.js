@@ -10,6 +10,17 @@ export const getRandomNumber = (min = MIN_VALUE, max = MAX_VALUE) => {
   const randomNumber = Math.floor(Math.random() * (max - min) + min);
   return randomNumber;
 };
+export const checkPrimeNumber = (num) => {
+  if (num < 2) {
+    return 'no';
+  }
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};
 export const gameMessage = (currectAnswer, userAnswer, userName, counter, repeatFunction) => {
   if (currectAnswer !== userAnswer) {
     return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${currectAnswer}'. \n Let's try again, ${userName}!`);
