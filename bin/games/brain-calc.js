@@ -6,7 +6,7 @@ import {
   checkExpressionResult,
   name,
   gameMessage,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const brainCalc = () => {
   const userName = name;

@@ -5,7 +5,7 @@ import {
   gameMessage,
   getRandomNumber,
   name,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const brainProgression = () => {
   const userName = name;

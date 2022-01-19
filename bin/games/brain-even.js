@@ -7,7 +7,7 @@ import {
   checkEvenNumber,
   name,
   gameMessage,
-} from '../src/index.js';
+} from '../../src/index.js';
 
 const brainEven = () => {
   const userName = name;
