@@ -6,7 +6,7 @@ const checkGcdResult = (firstValue, secondValue) => {
   let minValue = Math.min(firstValue, secondValue);
   let result = maxValue % minValue;
   if (minValue === 0 || maxValue === 0) {
-    return minValue;
+    return 0;
   }
   while (result !== 0) {
     maxValue = minValue;
