@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../index.js';
 
 // Функция проверки выражения
@@ -17,13 +16,12 @@ const brainCalcEngine = () => {
   const getRandomOperand = arrayOfOperands[Math.floor(Math.random() * arrayOfOperands.length)];
   const getRandomFirstValue = getRandomNumber();
   const getRandomSecondValue = getRandomNumber();
-  console.log(`Question: ${getRandomFirstValue} ${getRandomOperand} ${getRandomSecondValue}`);
-  const userAnswer = readlineSync.questionInt('Answer: ');
+  const question = `Question: ${getRandomFirstValue} ${getRandomOperand} ${getRandomSecondValue}`;
   const currectAnswer = checkExpressionResult(
     getRandomFirstValue,
     getRandomSecondValue,
     getRandomOperand,
   );
-  return { currectAnswer, userAnswer };
+  return { currectAnswer, question };
 };
 export default brainCalcEngine;

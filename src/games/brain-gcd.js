@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../index.js';
 
 const checkGcdResult = (firstValue, secondValue) => {
@@ -21,9 +20,8 @@ const checkGcdResult = (firstValue, secondValue) => {
 const brainGcdEngine = () => {
   const getFirstNumber = getRandomNumber();
   const getSecondNumber = getRandomNumber();
-  console.log(`Question: ${getFirstNumber} ${getSecondNumber}`);
-  const userAnswer = readlineSync.questionInt('Answer: ');
+  const question = `Question: ${getFirstNumber} ${getSecondNumber}`;
   const currectAnswer = checkGcdResult(getFirstNumber, getSecondNumber);
-  return { currectAnswer, userAnswer };
+  return { currectAnswer, question };
 };
 export default brainGcdEngine;

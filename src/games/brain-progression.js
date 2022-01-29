@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../index.js';
 
 const brainProgressionEngine = () => {
@@ -13,8 +12,7 @@ const brainProgressionEngine = () => {
   const currectAnswer = arrayOfNumbers[secretPoint];
   const questionArray = arrayOfNumbers;
   questionArray.splice(secretPoint, 1, '..');
-  console.log(`Question: ${questionArray.join(' ')}`);
-  const userAnswer = readlineSync.questionInt('Answer: ');
-  return { currectAnswer, userAnswer };
+  const question = `Question: ${questionArray.join(' ')}`;
+  return { currectAnswer, question };
 };
 export default brainProgressionEngine;
