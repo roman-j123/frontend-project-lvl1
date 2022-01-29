@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../index.js';
+import getRandomNumber from '../random.js';
 
 const checkPrimeNumber = (num) => {
   if (num < 2) {

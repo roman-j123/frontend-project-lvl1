@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const MIN_VALUE = 0;
-const MAX_VALUE = 100;
+export const MIN_VALUE = 0;
+export const MAX_VALUE = 100;
 const MAX_ROUNDS = 3;
 
 // Общий движок для всех игр
@@ -27,9 +27,4 @@ export const gameEngine = (game, rules) => {
     console.log('Correct!');
   }
   return console.log(`Congratulations, ${userName}!`);
-};
-// Функция получения случайного числа
-export const getRandomNumber = (min = MIN_VALUE, max = MAX_VALUE) => {
-  const randomNumber = Math.floor(Math.random() * (max - min) + min);
-  return randomNumber;
 };

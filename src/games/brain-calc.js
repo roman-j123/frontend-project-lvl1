@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../index.js';
+import getRandomNumber from '../random.js';
 
 // Функция проверки выражения
 const checkExpressionResult = (firstValue, secondValue, operand) => {

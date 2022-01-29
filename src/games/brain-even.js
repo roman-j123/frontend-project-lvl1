@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../index.js';
+import getRandomNumber from '../random.js';
 
 const checkEvenNumber = (number) => number % 2 === 0;
 const brainEvenEngine = () => {

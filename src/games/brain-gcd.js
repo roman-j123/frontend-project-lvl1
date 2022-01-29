@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../index.js';
+import getRandomNumber from '../random.js';
 
 const checkGcdResult = (firstValue, secondValue) => {
   let maxValue = Math.max(firstValue, secondValue);
