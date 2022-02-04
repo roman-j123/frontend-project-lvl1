@@ -4,7 +4,7 @@ const checkEvenNumber = (number) => number % 2 === 0;
 const brainEvenEngine = () => {
   const randomNumber = getRandomNumber();
   const question = `Question: ${randomNumber}`;
-  const currectAnswer = checkEvenNumber(randomNumber) ? 'yes' : 'no';
-  return { currectAnswer, question };
+  const correctAnswer = checkEvenNumber(randomNumber) ? 'yes' : 'no';
+  return { correctAnswer, question };
 };
 export default brainEvenEngine;

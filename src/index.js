@@ -11,11 +11,11 @@ export const gameEngine = (game, rules) => {
   console.log(`Hello, ${userName}`);
   console.log(rules);
   for (let i = 0; i < MAX_ROUNDS; i += 1) {
-    const { currectAnswer, question } = game();
+    const { correctAnswer, question } = game();
     console.log(question);
     const userAnswer = readlineSync.question('Answer: ');
-    if (currectAnswer !== userAnswer) {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${currectAnswer}'. \n Let's try again, ${userName}!`);
+    if (correctAnswer !== userAnswer) {
+      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \n Let's try again, ${userName}!`);
     }
     console.log('Correct!');
   }

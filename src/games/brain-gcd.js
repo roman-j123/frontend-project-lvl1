@@ -21,7 +21,7 @@ const brainGcdEngine = () => {
   const getFirstNumber = getRandomNumber();
   const getSecondNumber = getRandomNumber();
   const question = `Question: ${getFirstNumber} ${getSecondNumber}`;
-  const currectAnswer = checkGcdResult(getFirstNumber, getSecondNumber);
-  return { currectAnswer, question };
+  const correctAnswer = checkGcdResult(getFirstNumber, getSecondNumber);
+  return { correctAnswer, question };
 };
 export default brainGcdEngine;

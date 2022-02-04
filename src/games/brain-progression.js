@@ -9,10 +9,10 @@ const brainProgressionEngine = () => {
   for (let i = 0; arrayOfNumbers.length <= lengthOfArray; i += 1) {
     arrayOfNumbers.push((startPoint += stepOfProgression));
   }
-  const currectAnswer = arrayOfNumbers[secretPoint];
+  const correctAnswer = arrayOfNumbers[secretPoint];
   const questionArray = arrayOfNumbers;
   questionArray.splice(secretPoint, 1, '..');
   const question = `Question: ${questionArray.join(' ')}`;
-  return { currectAnswer, question };
+  return { correctAnswer, question };
 };
 export default brainProgressionEngine;

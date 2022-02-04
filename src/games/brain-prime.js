@@ -13,8 +13,8 @@ const checkPrimeNumber = (num) => {
 };
 const brainPrimeEngine = () => {
   const randomNumber = getRandomNumber();
-  const currectAnswer = checkPrimeNumber(randomNumber);
+  const correctAnswer = checkPrimeNumber(randomNumber);
   const question = `Question: ${randomNumber}`;
-  return { currectAnswer, question };
+  return { correctAnswer, question };
 };
 export default brainPrimeEngine;

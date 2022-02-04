@@ -7,21 +7,23 @@ const checkExpressionResult = (firstValue, secondValue, operand) => {
       return (firstValue - secondValue);
     case '*':
       return (firstValue * secondValue);
-    default:
+    case '+':
       return (firstValue + secondValue);
+    default:
+      return false;
   }
 };
 const brainCalcEngine = () => {
   const arrayOfOperands = ['+', '-', '*'];
-  const getRandomOperand = arrayOfOperands[Math.floor(Math.random() * arrayOfOperands.length)];
+  const getRandomOperand = getRandomNumber(0, arrayOfOperands.length);
   const getRandomFirstValue = getRandomNumber();
   const getRandomSecondValue = getRandomNumber();
-  const question = `Question: ${getRandomFirstValue} ${getRandomOperand} ${getRandomSecondValue}`;
-  const currectAnswer = checkExpressionResult(
+  const question = `Question: ${getRandomFirstValue} ${arrayOfOperands[getRandomOperand]} ${getRandomSecondValue}`;
+  const correctAnswer = checkExpressionResult(
     getRandomFirstValue,
     getRandomSecondValue,
-    getRandomOperand,
+    arrayOfOperands[getRandomOperand],
   );
-  return { currectAnswer, question };
+  return { correctAnswer, question };
 };
 export default brainCalcEngine;
