@@ -1,21 +1,19 @@
 import getRandomNumber from '../random.js';
 
 const checkGcdResult = (firstValue, secondValue) => {
-  let maxValue = Math.max(firstValue, secondValue);
-  let minValue = Math.min(firstValue, secondValue);
-  let result = maxValue % minValue;
-  if (minValue === 0 || maxValue === 0) {
-    return 0;
-  }
-  while (result !== 0) {
-    maxValue = minValue;
-    minValue = result;
-    result = maxValue % minValue;
-    if (result === 0) {
-      return minValue;
+  let a = firstValue;
+  let b = secondValue;
+  if (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
     }
+  } else {
+    return a + b;
   }
-  return minValue;
+
+  return checkGcdResult(a, b);
 };
 const brainGcdEngine = () => {
   const getFirstNumber = getRandomNumber();
