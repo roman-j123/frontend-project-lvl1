@@ -1,5 +1,6 @@
 import getRandomNumber from '../random.js';
 
+const operands = ['+', '-', '*'];
 // Функция проверки выражения
 const checkExpressionResult = (firstValue, secondValue, operand) => {
   switch (operand) {
@@ -14,15 +15,14 @@ const checkExpressionResult = (firstValue, secondValue, operand) => {
   }
 };
 const brainCalcEngine = () => {
-  const arrayOfOperands = ['+', '-', '*'];
-  const getRandomOperand = getRandomNumber(0, arrayOfOperands.length);
+  const getRandomOperand = getRandomNumber(0, operands.length);
   const getRandomFirstValue = getRandomNumber();
   const getRandomSecondValue = getRandomNumber();
-  const question = `Question: ${getRandomFirstValue} ${arrayOfOperands[getRandomOperand]} ${getRandomSecondValue}`;
+  const question = `Question: ${getRandomFirstValue} ${operands[getRandomOperand]} ${getRandomSecondValue}`;
   const correctAnswer = checkExpressionResult(
     getRandomFirstValue,
     getRandomSecondValue,
-    arrayOfOperands[getRandomOperand],
+    operands[getRandomOperand],
   );
   return { correctAnswer, question };
 };
