@@ -15,14 +15,14 @@ const checkExpressionResult = (firstValue, secondValue, operand) => {
   }
 };
 const brainCalcEngine = () => {
-  const operand = getRandomNumber(0, operands.length);
+  const operand = operands[getRandomNumber(0, operands.length)];
   const firstValue = getRandomNumber();
   const secondValue = getRandomNumber();
-  const question = `Question: ${firstValue} ${operands[operand]} ${secondValue}`;
+  const question = `Question: ${firstValue} ${operand} ${secondValue}`;
   const correctAnswer = checkExpressionResult(
     firstValue,
     secondValue,
-    operands[operand],
+    operand,
   );
   return { correctAnswer, question };
 };
