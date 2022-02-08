@@ -16,10 +16,10 @@ const checkGcdResult = (firstValue, secondValue) => {
   return checkGcdResult(a, b);
 };
 const brainGcdEngine = () => {
-  const getFirstNumber = getRandomNumber();
-  const getSecondNumber = getRandomNumber();
-  const question = `Question: ${getFirstNumber} ${getSecondNumber}`;
-  const correctAnswer = checkGcdResult(getFirstNumber, getSecondNumber);
+  const firstValue = getRandomNumber();
+  const secondValue = getRandomNumber();
+  const question = `Question: ${firstValue} ${secondValue}`;
+  const correctAnswer = checkGcdResult(firstValue, secondValue);
   return { correctAnswer, question };
 };
 export default brainGcdEngine;
