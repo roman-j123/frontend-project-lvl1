@@ -10,11 +10,11 @@ const generateProgressionLine = (start, step, progressionLength) => {
 };
 
 const brainProgression = () => {
-  const lengthOfArray = getRandomNumber(5, 15);
+  const lengthOfProgression = getRandomNumber(5, 15);
   const stepOfProgression = getRandomNumber(1, 10);
   const startPoint = getRandomNumber(1, 15);
-  const secretPoint = getRandomNumber(0, lengthOfArray);
-  const progression = generateProgressionLine(startPoint, stepOfProgression, lengthOfArray);
+  const secretPoint = getRandomNumber(0, lengthOfProgression);
+  const progression = generateProgressionLine(startPoint, stepOfProgression, lengthOfProgression);
   const correctAnswer = progression[secretPoint];
   progression.splice(secretPoint, 1, '..');
   const question = `Question: ${progression.join(' ')}`;
