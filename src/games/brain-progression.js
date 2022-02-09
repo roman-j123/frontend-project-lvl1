@@ -17,7 +17,7 @@ const brainProgression = () => {
   const progression = generateProgression(startPoint, stepOfProgression, lengthOfProgression);
   const correctAnswer = progression[secretPoint];
   progression.splice(secretPoint, 1, '..');
-  const question = `Question: ${progression.join(' ')}`;
+  const question = progression.join(' ');
   return { correctAnswer, question };
 };
 export default brainProgression;

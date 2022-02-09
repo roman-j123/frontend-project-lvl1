@@ -12,7 +12,7 @@ export const gameEngine = (game, rules) => {
   console.log(rules);
   for (let i = 0; i < MAX_ROUNDS; i += 1) {
     const { correctAnswer, question } = game();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Answer: ');
     if (String(correctAnswer) !== userAnswer) {
       return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \n Let's try again, ${userName}!`);

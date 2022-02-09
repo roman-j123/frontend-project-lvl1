@@ -11,7 +11,7 @@ const checkPrimeNumber = (num) => {
 const brainPrime = () => {
   const randomNumber = getRandomNumber();
   const correctAnswer = checkPrimeNumber(randomNumber) ? 'yes' : 'no';
-  const question = `Question: ${randomNumber}`;
+  const question = randomNumber;
   return { correctAnswer, question };
 };
 export default brainPrime;

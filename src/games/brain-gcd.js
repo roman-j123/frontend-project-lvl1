@@ -18,7 +18,7 @@ const checkGcdResult = (firstValue, secondValue) => {
 const brainGcd = () => {
   const firstValue = getRandomNumber();
   const secondValue = getRandomNumber();
-  const question = `Question: ${firstValue} ${secondValue}`;
+  const question = `${firstValue} ${secondValue}`;
   const correctAnswer = checkGcdResult(firstValue, secondValue);
   return { correctAnswer, question };
 };

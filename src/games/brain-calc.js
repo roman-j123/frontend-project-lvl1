@@ -18,7 +18,7 @@ const brainCalc = () => {
   const operand = operands[getRandomNumber(0, operands.length)];
   const firstValue = getRandomNumber();
   const secondValue = getRandomNumber();
-  const question = `Question: ${firstValue} ${operand} ${secondValue}`;
+  const question = `${firstValue} ${operand} ${secondValue}`;
   const correctAnswer = checkExpressionResult(
     firstValue,
     secondValue,
