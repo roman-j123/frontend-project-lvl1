@@ -20,4 +20,8 @@ const brainProgression = () => {
   const question = progression.join(' ');
   return { correctAnswer, question };
 };
-export default brainProgression;
+const startBrainProgressionGame = () => {
+  console.log('What number is missing in the progression?');
+  return brainProgression();
+};
+export default startBrainProgressionGame;

@@ -26,4 +26,8 @@ const brainCalc = () => {
   );
   return { correctAnswer, question };
 };
-export default brainCalc;
+const startBrainCalcGame = () => {
+  console.log('What is the result of the expression?');
+  return brainCalc();
+};
+export default startBrainCalcGame;

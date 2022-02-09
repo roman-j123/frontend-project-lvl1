@@ -7,4 +7,8 @@ const brainEven = () => {
   const correctAnswer = checkEvenNumber(randomNumber) ? 'yes' : 'no';
   return { correctAnswer, question };
 };
-export default brainEven;
+const startBrainEvenGame = () => {
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  return brainEven();
+};
+export default startBrainEvenGame;

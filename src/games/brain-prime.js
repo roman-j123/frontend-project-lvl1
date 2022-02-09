@@ -14,4 +14,8 @@ const brainPrime = () => {
   const question = randomNumber;
   return { correctAnswer, question };
 };
-export default brainPrime;
+const startBrainPrimeGame = () => {
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  return brainPrime();
+};
+export default startBrainPrimeGame;

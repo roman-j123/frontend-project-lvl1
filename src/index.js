@@ -5,11 +5,10 @@ export const MAX_VALUE = 100;
 const MAX_ROUNDS = 3;
 
 // Общий движок для всех игр
-export const gameEngine = (game, rules) => {
+export const gameEngine = (game) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);
-  console.log(rules);
   for (let i = 0; i < MAX_ROUNDS; i += 1) {
     const { correctAnswer, question } = game();
     console.log(`Question: ${question}`);

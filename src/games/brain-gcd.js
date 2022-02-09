@@ -22,4 +22,8 @@ const brainGcd = () => {
   const correctAnswer = checkGcdResult(firstValue, secondValue);
   return { correctAnswer, question };
 };
-export default brainGcd;
+const startbBrainGcdGame = () => {
+  console.log('Find the greatest common divisor of given numbers.');
+  return brainGcd();
+};
+export default startbBrainGcdGame;
