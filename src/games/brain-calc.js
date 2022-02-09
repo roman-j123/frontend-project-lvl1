@@ -14,7 +14,7 @@ const checkExpressionResult = (firstValue, secondValue, operand) => {
       return false;
   }
 };
-const brainCalcEngine = () => {
+const brainCalc = () => {
   const operand = operands[getRandomNumber(0, operands.length)];
   const firstValue = getRandomNumber();
   const secondValue = getRandomNumber();
@@ -26,4 +26,4 @@ const brainCalcEngine = () => {
   );
   return { correctAnswer, question };
 };
-export default brainCalcEngine;
+export default brainCalc;

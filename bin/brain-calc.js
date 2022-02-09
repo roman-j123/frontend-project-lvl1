@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 import { gameEngine } from '../src/index.js';
-import brainCalcEngine from '../src/games/brain-calc.js';
+import brainCalc from '../src/games/brain-calc.js';
 
-gameEngine(brainCalcEngine, 'What is the result of the expression?');
+gameEngine(brainCalc, 'What is the result of the expression?');

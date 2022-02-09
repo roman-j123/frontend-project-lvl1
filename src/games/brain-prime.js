@@ -8,10 +8,10 @@ const checkPrimeNumber = (num) => {
   }
   return true;
 };
-const brainPrimeEngine = () => {
+const brainPrime = () => {
   const randomNumber = getRandomNumber();
   const correctAnswer = checkPrimeNumber(randomNumber) ? 'yes' : 'no';
   const question = `Question: ${randomNumber}`;
   return { correctAnswer, question };
 };
-export default brainPrimeEngine;
+export default brainPrime;

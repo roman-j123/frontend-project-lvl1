@@ -9,7 +9,7 @@ const generateProgressionLine = (start, step, progressionLength) => {
   return progressionArray;
 };
 
-const brainProgressionEngine = () => {
+const brainProgression = () => {
   const lengthOfArray = getRandomNumber(5, 15);
   const stepOfProgression = getRandomNumber(1, 10);
   const startPoint = getRandomNumber(1, 15);
@@ -20,4 +20,4 @@ const brainProgressionEngine = () => {
   const question = `Question: ${progression.join(' ')}`;
   return { correctAnswer, question };
 };
-export default brainProgressionEngine;
+export default brainProgression;
