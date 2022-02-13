@@ -1,4 +1,5 @@
 import getRandomNumber from '../random.js';
+import { gameEngine } from '../index.js';
 
 const operands = ['+', '-', '*'];
 // Функция проверки выражения
@@ -26,8 +27,5 @@ const brainCalc = () => {
   );
   return { correctAnswer, question };
 };
-const startBrainCalcGame = () => {
-  console.log('What is the result of the expression?');
-  return brainCalc();
-};
+const startBrainCalcGame = () => { gameEngine(brainCalc, 'What is the result of the expression?'); };
 export default startBrainCalcGame;

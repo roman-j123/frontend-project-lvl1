@@ -1,4 +1,5 @@
 import getRandomNumber from '../random.js';
+import { gameEngine } from '../index.js';
 
 const generateProgression = (start, step, progressionLength) => {
   const progressionArray = [];
@@ -20,8 +21,5 @@ const brainProgression = () => {
   const question = progression.join(' ');
   return { correctAnswer, question };
 };
-const startBrainProgressionGame = () => {
-  console.log('What number is missing in the progression?');
-  return brainProgression();
-};
+const startBrainProgressionGame = () => { gameEngine(brainProgression, 'What number is missing in the progression?'); };
 export default startBrainProgressionGame;
